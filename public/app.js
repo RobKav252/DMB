@@ -1,4 +1,4 @@
-require(['libs/text!header.html', 'libs/text!home.html', 'libs/text!footer.html'], function (headerTpl, homeTpl, footerTpl) {
+require(['libs/text!header.html', 'libs/text!templates/timesheetentry.html', 'libs/text!footer.html'], function (headerTpl, homeTpl, footerTpl) {
 	
 	var ApplicationRouter = Backbone.Router.extend({
 		routes: {
