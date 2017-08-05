@@ -1,5 +1,7 @@
 package fyp.services;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -25,5 +27,10 @@ public class SiteServiceImpl implements SiteService {
 	public Site findOne(Integer siteID) {
 		
 		return siterepository.findOne(siteID);
+	}
+
+	@Override
+	public List<Site> findAll() {
+		return siterepository.findAll();
 	}
 }

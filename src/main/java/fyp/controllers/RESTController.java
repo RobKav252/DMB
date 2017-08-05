@@ -1,5 +1,7 @@
 package fyp.controllers;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 
 //import org.springframework.web.bind.annotation.RequestParam;
@@ -128,5 +130,14 @@ public class RESTController implements RESTInterface {
 		) {
 		
 		return siteService.findOne(siteID);
+	}
+	
+	@RequestMapping(
+			value="/Site/all", 
+			method = RequestMethod.GET, 
+			produces = MediaType.APPLICATION_JSON_VALUE)
+	public @ResponseBody List<Site> getAllSites() {
+		
+		return siteService.findAll();
 	}
 }
