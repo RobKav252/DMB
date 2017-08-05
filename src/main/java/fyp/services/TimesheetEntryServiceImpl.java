@@ -16,4 +16,10 @@ public class TimesheetEntryServiceImpl implements TimesheetEntryService {
 	public TimesheetEntry save(TimesheetEntry entry) {
 		return timesheetrepository.save(entry);
 	}
+
+	@Override
+	public TimesheetEntry findOne(Integer entryID) {
+		return timesheetrepository.findOne(entryID);
+		
+	}
 }

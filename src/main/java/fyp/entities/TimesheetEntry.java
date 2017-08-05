@@ -1,12 +1,12 @@
 package fyp.entities;
 
 
-import java.util.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+
+import com.github.reinert.jjschema.Attributes;
 
 // http://www.techferry.com/articles/hibernate-jpa-annotations.html
 @Entity
@@ -17,18 +17,24 @@ public class TimesheetEntry {
     private Integer timesheetID;
 	
     private Integer employeeID;
-    private Date startDate;
-    private Date endDate;
+    
+    @Attributes(title = "Start Date")
+    private String dateBegin;
+    
+    @Attributes(title = "End Date")
+    private String dateEnd;
     private String workDesc;
     
-    // making sure the column has default = NULL
-    @Column(insertable = false)
+    // column default value = null
+    //@Column(insertable = false)
     private Integer siteID;
     
-    // making sure the column has default = NULL
-    @Column(insertable = false)
+    
+ //   @Column(insertable = false)
     private Integer statusID;
     
+ 
+    // empty constructor?? without will not save to DB (I think)
     public TimesheetEntry()
     {
     	
@@ -36,17 +42,20 @@ public class TimesheetEntry {
     
 	public TimesheetEntry(
 			int employeeID, 
-			Date startDate, 
-			Date endDate,
+			String dateBegin, 
+			String dateEnd,
 			String workDesc,
 			Integer siteID) 
 	{
 		this.setEmployeeID(employeeID);
-		this.setStartDate(startDate);
-		this.setEndDate(endDate);
+		this.setDateBegin(dateBegin);
+		this.setDateEnd(dateEnd);
 		this.setWorkDesc( workDesc );
 		this.setSiteID(siteID);
 	}
+	
+
+    
 
 	public int getEmployeeID() {
 		return employeeID;
@@ -56,20 +65,20 @@ public class TimesheetEntry {
 		this.employeeID = employeeID;
 	}
 
-	public Date getStartDate() {
-		return startDate;
+	public String getDateBegin() {
+		return dateBegin;
 	}
 
-	public void setStartDate(Date startDate) {
-		this.startDate = startDate;
+	public void setDateBegin(String dateBegin) {
+		this.dateBegin = dateBegin;
 	}
 
-	public Date getEndDate() {
-		return endDate;
+	public String getDateEnd() {
+		return dateEnd;
 	}
 
-	public void setEndDate(Date endDate) {
-		this.endDate = endDate;
+	public void setDateEnd(String dateEnd) {
+		this.dateEnd = dateEnd;
 	}
 
 	public String getWorkDesc() {

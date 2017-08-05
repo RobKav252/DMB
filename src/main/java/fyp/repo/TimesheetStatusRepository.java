@@ -4,6 +4,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import fyp.entities.TimesheetStatus;
 
-public interface TimesheetStatusRepository extends JpaRepository<TimesheetStatus, Long> {
+// automatic translation through ORM between MySQL DB and POJO (TimesheetStatus)
+public interface TimesheetStatusRepository extends JpaRepository<TimesheetStatus, Integer> {
 }
 

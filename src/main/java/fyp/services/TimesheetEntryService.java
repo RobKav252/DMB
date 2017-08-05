@@ -1,11 +1,12 @@
 package fyp.services;
 
-//import java.util.List;
-//
-//import fyp.entities.Employee;
+
 import fyp.entities.TimesheetEntry;
 
+//passes available DB methods to Spring (save)
 public interface TimesheetEntryService {
 	public TimesheetEntry save(TimesheetEntry entry);
-	//public List<TimesheetEntry> findByEmployee(Employee employee);
+	public TimesheetEntry findOne(Integer entryID);
+	
+	
 }

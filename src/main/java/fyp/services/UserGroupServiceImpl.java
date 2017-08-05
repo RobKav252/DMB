@@ -10,11 +10,16 @@ import fyp.repo.UserGroupRepository;
 public class UserGroupServiceImpl implements UserGroupService {
 
 	@Autowired
-	private UserGroupRepository userGroupRepository; //DB con to recall
+	private UserGroupRepository usergrouprepository; //DB con to recall
 
 	@Override
 	public UserGroup save(UserGroup entry) {
-		return userGroupRepository.save(entry);
+		return usergrouprepository.save(entry);
+	}
+	
+	@Override
+	public UserGroup findOne(Integer groupID) {
+		return usergrouprepository.findOne(groupID);
 	}
 }
 

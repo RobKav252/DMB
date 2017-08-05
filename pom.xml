@@ -18,31 +18,24 @@
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 		</dependency> 
+       
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
+		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
 		
 		<dependency>
-		        <groupId>org.jsondoc</groupId>
-		        <artifactId>spring-boot-starter-jsondoc</artifactId>
-		        <version>1.2.17</version>
-		</dependency>
-		<dependency>
-		    <groupId>org.jsondoc</groupId>
-		    <artifactId>jsondoc-ui-webjar</artifactId>
-		    <version>1.2.15</version>
+		    <groupId>com.github.reinert</groupId>
+		    <artifactId>jjschema</artifactId>
+		    <version>1.4</version>
 		</dependency>
 		
+	
     </dependencies>
 
     <properties>

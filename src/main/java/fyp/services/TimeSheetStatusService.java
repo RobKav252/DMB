@@ -5,7 +5,8 @@ package fyp.services;
 //import fyp.entities.Employee;
 import fyp.entities.TimesheetStatus;
 
-public interface TimeSheetStatusService {
+// passes available DB methods to Spring (save)
+public interface TimesheetStatusService {
 	public TimesheetStatus save(TimesheetStatus entry);
 	//public List<TimesheetEntry> findByEmployee(Employee employee);
 }

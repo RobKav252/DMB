@@ -1,7 +1,0 @@
-/* For small screen */
-.genericTable .row :nth-child(even){
-  background-color: #fafafa;
-}
-.genericTable .row :nth-child(odd){
-  background-color: #fafafa;
-}

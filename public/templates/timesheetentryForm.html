@@ -1,0 +1,13 @@
+<!-- here the TimesheetEntry form will show up -->
+<div id="timesheetEntryForm"></div> 
+<input type="button" value="Add Timesheet Entry" id="formSubmit" />
+
+<!-- importing library which draws forms from JSON Schema -->
+<script type="text/javascript">
+	fg = new FormGenerator( 'http://localhost:8080/schema/' );
+	
+	fg.render( 'TimesheetEntry', 'timesheetEntryForm'); //render = draw the elemnert timesheetentry, where to put the form siteForm
+ </script> <!-- links to form-generator.js -->
+
+
+

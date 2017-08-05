@@ -7,13 +7,13 @@ import fyp.entities.TimesheetStatus;
 import fyp.repo.TimesheetStatusRepository;
 
 @Repository
-public class TimesheetStatusServiceImpl implements TimeSheetStatusService {
+public class TimesheetStatusServiceImpl implements TimesheetStatusService {
 
 	@Autowired
-	private TimesheetStatusRepository timesheetstatusRepository;
+	private TimesheetStatusRepository timesheetstatusrepository;
 
 	@Override
 	public TimesheetStatus save(TimesheetStatus entry) {
-		return timesheetstatusRepository.save(entry);
+		return timesheetstatusrepository.save(entry);
 	}
 }
